@@ -9,6 +9,7 @@ __pycache__/
 # pycache
 apps/user/__pycache__/
 apps/common/__pycache__/
+apps/story/__pycache__/
 # apps/myapp/__pycache__/
 apps/__pycache__/
 conf/__pycache__/
