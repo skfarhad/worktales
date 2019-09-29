@@ -29,9 +29,11 @@ INSTALLED_APPS = [
     'rest_framework_swagger',
     'django_filters',
     'background_task',
-
     'apps.user',
-    'apps.story'
+    'apps.workplace',
+    'apps.story',
+    'apps.chat',
+    'apps.activity',
 ]
 
 MIDDLEWARE = [
@@ -72,8 +74,11 @@ WSGI_APPLICATION = 'conf.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
+        'NAME': 'worktales_backend',
+        'USER': 'postgres',
+        'HOST': 'localhost',
+        'PASSWORD': os.environ['DB_PASSWORD'],
     }
 }
 

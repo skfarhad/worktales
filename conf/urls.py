@@ -12,6 +12,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('apidoc/', get_swagger_view(title=PROJECT_NAME + ' API Documentation')),
     path('v0/user/', include('apps.user.urls')),
+    path('v0/story/', include('apps.story.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 admin.site.site_header = PROJECT_NAME + " Admin"
